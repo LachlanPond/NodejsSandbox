@@ -5,9 +5,13 @@ RUN apt install -y \
     npm \
     sqlite3
 RUN npm install -g \
-    nodemon 
+    nodemon
 RUN npm install \
-    mysql
+    mysql \
+    express \
+    body-parser \
+    multer \
+    pug
 COPY src/ /var/www/html
 EXPOSE 3000
 WORKDIR /var/www/html
